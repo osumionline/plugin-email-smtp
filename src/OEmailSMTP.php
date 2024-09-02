@@ -398,8 +398,8 @@ class OEmailSMTP {
 				catch (\Exception $e) {
 					$this->addResultError($item);
 					$ret['status'] = 'error';
-					$ret['mens'] .= $this->getErrorMessage('ERROR_SENDING').$item.' - Error: '.$e->errorMessage();
-					$this->log('Error sending email to: "'.$item.'": '.$e->errorMessage());
+					$ret['mens'] .= $this->getErrorMessage('ERROR_SENDING').$item.' - Error: '.$e->getMessage();
+					$this->log('Error sending email to: "'.$item.'": '.$e->getMessage());
 				}
 
 				$mail = null;
