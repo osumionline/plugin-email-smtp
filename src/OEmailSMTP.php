@@ -83,7 +83,7 @@ class OEmailSMTP {
 	 * @return void
 	 */
 	public function addRecipient(string $r): void {
-		array_push($this->recipients, $r);
+		$this->recipients[] = $r;
 	}
 
 	/**
@@ -257,7 +257,7 @@ class OEmailSMTP {
 	 * @param string $a Name/path of the file to be attached
 	 */
 	public function addAttachment(string $a): void {
-		array_push($this->attachments, $a);
+		$this->attachments[] = $a;
 	}
 
 	/**
@@ -288,7 +288,7 @@ class OEmailSMTP {
 	 * @return void
 	 */
 	public function addResultOk(string $ro): void {
-		array_push($this->result_ok, $ro);
+		$this->result_ok[] = $ro;
 	}
 
 	/**
@@ -319,7 +319,7 @@ class OEmailSMTP {
 	 * @return void
 	 */
 	public function addResultError(string $re): void {
-		array_push($this->result_error, $re);
+		$this->result_error[] = $re;
 	}
 
 	/**
