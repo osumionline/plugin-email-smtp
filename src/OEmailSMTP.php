@@ -191,11 +191,11 @@ class OEmailSMTP {
 	 *
 	 * @param string $f Senders email address
 	 *
-	 * @param string $name Senders full name
+	 * @param string | null $name Senders full name
 	 *
 	 * @return void
 	 */
-	public function setFrom(string $f, ?string $name=null): void {
+	public function setFrom(string $f, string | null $name = null): void {
 		$this->from = $f;
 		if (!is_null($name)) {
 			$this->from_name = $name;
